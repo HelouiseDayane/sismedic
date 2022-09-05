@@ -1,0 +1,78 @@
+<STYLE>
+/**/
+body.dark-only {
+  background-color: black;
+}/***/
+
+form {
+  text-align: center;
+  padding-top: 20%;
+}
+
+
+
+
+
+
+
+
+
+
+.newcheck input[type=checkbox] {display:none;}
+.newcheck span {
+  	background-color: #24695c69;
+    border:1px solid #24695C;
+    border-radius:5px;
+    font-weight:100;
+    color: #24695C;
+    font-size: 1rem;
+    text-decoration:none;
+    font-family: Arial;
+    text-align:right; 
+    padding-right: 8px;
+    width:140px;
+    height:20px;
+    line-height:20px;
+    cursor:pointer;
+    display:inline-block;
+    -webkit-transition:background-color 150ms ease-in;
+    -moz-transition:background-color 150ms ease-in;
+    -ms-transition:background-color 150ms ease-in;
+    -o-transition:background-color 150ms ease-in;
+    transition:background-color 150ms ease-in;
+}
+
+.newcheck span:hover {
+    background-color:#24695C;
+    color:#fff;
+}
+.newcheck input[type=checkbox]:checked + span {
+  color:#fff;
+  text-decoration:none;
+  border-radius:5px;
+  background:#24695C url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAAbCAYAAACEP1QvAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAK8AAACvABQqw0mAAAACB0RVh0U29mdHdhcmUATWFjcm9tZWRpYSBGaXJld29ya3MgTVi7kSokAAAC3UlEQVR4nLXWQUhTcRwH8L8KsoTo+2KIQXgIEQoSqoMnMcogCUZCdFAi65AdJLx0sUNQ0SWQDiIjnUSEZWNQF71seli0wTNBcVszMYbIWOFmzK3n9nrfDvlgPt/mW7YfvNN7/9/n/f7//3u/vyApKnidJvmeZJ3Z/UrCTSTXSTIajS4ODAzsegEAFcOPkfzKglhYWJB7e3trKo0fIblIkwgGg14AVZXC60gGzGA9ZmZm3lUCryU5VQrWY3p6egSAqBb/J2qEEONCiE4rD9tstktCiPPFqjhZZtUjViomSVmWY/X19eMAbpslukEyv7S0dNMi/NgqHA6H442NjS8B9AOoNiZykFRJMpfLqW63+84+8D2rcCwW22hubn4F4D6AWuOGu0AyUzggm81uT0xMXC8C95DUrMCJROJnS0vLawAPARyiYbefJblpNjCdTmdHR0cvcu8M5a3AyWRyq62t7S2ApwAO6zl0vInk91IJUqlU2ul0ntkZ2E7DDBWLdDr9y+FweAA8A2AvLEDHP1lJlEgkNpaXl6+yyAwZQ1GUfHd39wcAzwEcp2HZdPxUJpPZspLQauRyud99fX1TAEYAnDDChbiYnZ29oijK9v+AVVXVBgcHfQCcAIr+L3btdq/X25PP59WDwJqmcWho6COAFwDOFYP34CSF3+/vV1XV0udjFi6XSwYwCqC9FGyKkxTBYPCRppXvezyeRQBjADr3g4viJMXc3JyzHNjn80UlSRoDcM0KXBInKebn5yetwLIsx+x2uwvALf2gcGCcZFUoFPKWgkOh0HpDQ8O43iiswjpeqp8zmUxeXllZ+Wx2c3V19UdXV5dPUZSwEMKZSqW0sk8B+72h3++3xWKxL4UVx+PxzZ1G8UBvFOVelo9RgUBAWltb+0b+bRStra1vADwpbBQVw0mK4eHho5FIJNLR0eHeaRTSv8I6XkVSSJJkdZVqhRB3hRCTQohE2WtsiD9ZGRnrkcoJ6QAAAABJRU5ErkJggg==) no-repeat 5% center;
+background-size:20px 20px;
+}
+.newcheck input[type=checkbox] + span {
+  color:#24695C;
+  text-decoration:none;
+  border-radius:5px;
+  background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAAfCAYAAAAfrhY5AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAK8AAACvABQqw0mAAAACB0RVh0U29mdHdhcmUATWFjcm9tZWRpYSBGaXJld29ya3MgTVi7kSokAAACKElEQVR4nL3WsU8TURzA8e+7uHYpswmvAduBhFI72IUFY2LpRAibk5xAbCIGF2c3E2nEooN/gImMVgYH1prGmCNoQhl8/QPwbziHcuS8vnd972z9re3d59uk73cn5PYmhnkC3ASemb4wZvYBBbzRffjr3Xs8w4W7QAvYK0v5KQPcAp4Cr2vFkhYHtPguw2oBECjVcAxoXd0DQHy96DdNAUn8Lzgah4A4DEAYhpgC4rgWdggYgTUBbR2eClsEGOFEwON4gGcLGwKEDWwK8BgeJytYE7BvC8cDZnK5ZWDFA/YWZ+VnlxtEAa4wQL1SPTt4+KgH5D2A04FqlKU8dr1RFrjtb/WAL8DR9b89UGp1mgFxuLDjf4TEOZ9WgA4ewacRYIK1+CQD0mAjPomAcXAqDohAqYusOMPdYYQBbqRc6LxA4nP8/dvC2svfDwAjrvvl/wxHEyjVWJyVHVt8YnA0pwO1Wpb6DRrHJw5HEyhV1wVE+NTgtADvf8CmAA94lQWuV6pn9yu3f2QJWJKFToQPgNAVbvtbvUN/+4XrIhJCUJ2bzwMbHnBQK5beCmH3PpHcXC6bUAjB5t173edr6z+BSw+g2z9v3rlVPBwXYFqZNgEJ+ANwcn3UxgWM29VpAUm4sOOfQGLJmAJsHhKmABM8gusCbGFdQBoMhgdLt3/erBVLzORyy1cve1ZwPGBJFjrVufm8CQYQYZh6ylaAPHBkCydmA7gERmCAPwadQxvY0CaQAAAAAElFTkSuQmCC) no-repeat 5% center;
+  background-size:20px 20px;
+}
+</STYLE>
+
+<body class="vsc-initialized dark-only">
+
+
+
+<form>
+  <label class="newcheck">
+    <input type="checkbox" name="" value=""/>
+    <span>Clique em mim</span>
+  </label>
+</form>
+
+
+
+</body>

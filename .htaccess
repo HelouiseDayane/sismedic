@@ -1,0 +1,3 @@
+# Muda o arquivo de erro 404
+# ErrorDocument 404 /erro404.php
+ErrorDocument 404 "<SCRIPT> var current = window.location.href.slice(window.location.href.indexOf('/') ).split('/'); current = current[current.length-1]; console.log(current); window.open('404#'+current,'_self')</SCRIPT>"
